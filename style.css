@@ -1,0 +1,616 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===============================
+RESET
+================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+    color:#333;
+}
+
+/* ===============================
+HEADER
+================================= */
+
+header{
+    text-align:center;
+    padding:40px 20px;
+}
+
+header h1{
+    font-size:42px;
+    color:#1e293b;
+    margin-bottom:20px;
+}
+
+#greeting{
+    color:#4f46e5;
+    margin-top:15px;
+    font-size:32px;
+}
+
+#clock{
+    font-size:42px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+#date{
+    color:#777;
+    margin-top:8px;
+    font-size:17px;
+}
+
+/* ===============================
+NAME BOX
+================================= */
+
+.name-box{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:15px;
+}
+
+.name-box input{
+    width:260px;
+}
+
+.name-box button{
+    width:90px;
+}
+
+/* ===============================
+MAIN
+================================= */
+
+main{
+    width:90%;
+    max-width:950px;
+    margin:auto;
+}
+
+/* ===============================
+CARD
+================================= */
+
+.card{
+    background:#fff;
+    border-radius:18px;
+    padding:30px;
+    margin-bottom:40px;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+    transition:all .3s ease;
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.12);
+
+}
+
+.card h2{
+    color:#1e293b;
+    margin-bottom:20px;
+}
+
+/* ===============================
+INPUT
+================================= */
+
+input{
+    width:100%;
+    padding:14px;
+    border:1px solid #d1d5db;
+    border-radius:8px;
+    outline:none;
+    font-size:15px;
+    margin-bottom:15px;
+
+    transition:all .3s ease;
+}
+
+input:focus{
+
+    border-color:#4f46e5;
+
+    box-shadow:0 0 0 4px rgba(79,70,229,.15);
+
+}
+
+/* ===============================
+BUTTON
+================================= */
+
+button{
+
+    border:none;
+
+    border-radius:8px;
+
+    padding:12px 22px;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:all .3s ease;
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 8px 18px rgba(0,0,0,.18);
+
+    filter:brightness(1.05);
+
+}
+
+button:active{
+
+    transform:scale(.96);
+
+}
+
+/* ===============================
+BUTTON GROUP
+================================= */
+
+.button-group{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+/* ===============================
+TIMER BUTTONS
+================================= */
+
+#startBtn{
+    background:#22c55e;
+}
+
+#startBtn:hover{
+    background:#16a34a;
+}
+
+#stopBtn{
+    background:#ef4444;
+}
+
+#stopBtn:hover{
+    background:#dc2626;
+}
+
+#resetBtn{
+    background:#64748b;
+}
+
+#resetBtn:hover{
+    background:#475569;
+}
+
+/* ===============================
+ADD TASK
+================================= */
+
+#addTask{
+    background:#3b82f6;
+    margin-bottom:20px;
+}
+
+#addTask:hover{
+    background:#2563eb;
+}
+
+/* ===============================
+EDIT BUTTON
+================================= */
+
+.edit-btn{
+    background:#f59e0b;
+}
+
+.edit-btn:hover{
+    background:#d97706;
+}
+
+/* ===============================
+DELETE BUTTON
+================================= */
+
+.delete-btn{
+    background:#ef4444;
+}
+
+.delete-btn:hover{
+    background:#dc2626;
+}
+
+/* ===============================
+TIMER
+================================= */
+
+#timer{
+    text-align:center;
+    font-size:72px;
+    margin:35px 0;
+    color:#222;
+}
+
+/* ===============================
+QUOTE
+================================= */
+
+.quote-box{
+    margin-top:30px;
+    padding-top:20px;
+    border-top:1px solid #ddd;
+}
+
+#quote{
+    background:#f8fafc;
+    padding:18px;
+    border-radius:10px;
+    text-align:center;
+    color:#555;
+    font-size:18px;
+    font-style:italic;
+    line-height:1.8;
+}
+
+/* ===============================
+TODO LIST
+================================= */
+
+#taskList{
+    list-style:none;
+    margin-top:20px;
+}
+
+#taskList li{
+
+    background:#eef2ff;
+
+    padding:15px;
+
+    margin-bottom:12px;
+
+    border-radius:10px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+    transition:.3s;
+
+}
+
+#taskList li:hover{
+
+    background:#e0e7ff;
+
+}
+
+.task-buttons{
+
+    display:flex;
+
+    gap:8px;
+
+}
+
+.completed{
+
+    text-decoration:line-through;
+
+    color:gray;
+
+}
+
+/* ===============================
+QUICK LINKS
+================================= */
+
+.quick-links{
+
+    display:flex;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+    margin-top:20px;
+
+}
+
+.quick-links button{
+
+    color:white;
+
+    font-weight:500;
+
+}
+
+.quick-links button:nth-child(1){
+    background:#24292f;
+}
+
+.quick-links button:nth-child(2){
+    background:#10a37f;
+}
+
+.quick-links button:nth-child(3){
+    background:#ff0000;
+}
+
+.quick-links button:nth-child(4){
+    background:#4285f4;
+}
+
+.quick-links button:hover{
+
+    opacity:.95;
+
+}
+
+/* ===============================
+HR
+================================= */
+
+hr{
+
+    margin:35px 0 25px;
+
+    border:none;
+
+    border-top:1px solid #ddd;
+
+}
+
+/* ===============================
+FOOTER
+================================= */
+
+.footer{
+
+    text-align:center;
+
+    margin-top:50px;
+
+    padding:30px;
+
+    background:white;
+
+    border-top:1px solid #ddd;
+
+}
+
+.footer h3{
+
+    color:#1e293b;
+
+    margin-bottom:10px;
+
+}
+
+.footer strong{
+
+    color:#4f46e5;
+
+}
+
+.footer p{
+
+    color:#666;
+
+    margin:6px 0;
+
+}
+
+/* ===============================
+RESPONSIVE
+================================= */
+
+@media(max-width:768px){
+
+    header h1{
+        font-size:30px;
+    }
+
+    #greeting{
+        font-size:24px;
+    }
+
+    #clock{
+        font-size:34px;
+    }
+
+    #timer{
+        font-size:55px;
+    }
+
+    .card{
+        padding:20px;
+    }
+
+    .button-group{
+        justify-content:center;
+    }
+
+    .quick-links{
+        justify-content:center;
+    }
+
+    #taskList li{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .task-buttons{
+
+        width:100%;
+
+    }
+
+    .task-buttons button{
+
+        flex:1;
+
+    }
+
+}
+/* Animasi muncul */
+.task-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:#eef2ff;
+    padding:16px 20px;
+    border-radius:12px;
+    margin-bottom:12px;
+
+    animation:fade .3s ease;
+}
+
+.task-left{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-size:17px;
+    flex:1;
+}
+
+.task-left input{
+    width:18px;
+    height:18px;
+    cursor:pointer;
+}
+
+.task-buttons{
+    display:flex;
+    gap:10px;
+}
+
+.completed{
+    text-decoration:line-through;
+    color:#888;
+}
+
+
+/* Input edit */
+
+.edit-input{
+
+    flex:1;
+
+    padding:10px;
+
+    border:2px solid #4f46e5;
+
+    border-radius:8px;
+
+    outline:none;
+
+    transition:all .3s ease;
+
+}
+
+.edit-input:focus{
+
+    box-shadow:0 0 10px rgba(79,70,229,.2);
+
+}
+/* Input edit */
+
+.edit-input{
+
+    flex:1;
+
+    padding:10px 12px;
+
+    border:2px solid #4f46e5;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    transition:all .3s ease;
+
+}
+
+.edit-input:focus{
+
+    outline:none;
+
+    box-shadow:0 0 12px rgba(79,70,229,.25);
+
+}
+
+/* Tombol Save */
+
+.save-btn{
+
+    background:#22c55e;
+
+}
+
+.save-btn:hover{
+
+    background:#16a34a;
+
+}
+
+/* Animasi */
+
+.task-item{
+
+    animation:fade .3s ease;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(8px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
